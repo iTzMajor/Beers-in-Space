@@ -1,0 +1,28 @@
+i've created a function called iscollision where you have 4 cordinates two of enemy and two of bullet.
+i've used all of these four cordinates in this formula the distance formula
+then i managed to execute this formula inside my code.
+i imported the math library and used 
+"math.sqrt + math.pow"
+using the power function we squared it just like the math distance formula.
+
+if distance <27
+the number 27 was tested and found as proper number for distance between
+enemy and bullet to call it a collision if the number is less it will return true.
+ 
+
+def isCollision(enemyX,enemyY,bulletX,bulletY):
+    distance = math.sqrt((math.pow(enemyX-bulletX,2)) + (math.pow(enemyY-bulletY,2)))
+    if distance < 27:
+        return True
+    else:
+        return False
+
+   # collision
+    collision = isCollision(enemyX,enemyY,bulletX,bulletY)
+    if collision:
+        bulletY = 480
+        bullet_state = "ready"
+        score += 1
+        print(score)
+        enemyX = random.randint(0,735)
+        enemyY = random.randint(50,150)
