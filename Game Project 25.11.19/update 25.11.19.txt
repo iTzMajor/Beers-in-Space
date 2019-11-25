@@ -1,0 +1,2 @@
+multi enemies using List and .append
+problem is when lunching i get a black screen but when closed you can see the game and the enemies..
